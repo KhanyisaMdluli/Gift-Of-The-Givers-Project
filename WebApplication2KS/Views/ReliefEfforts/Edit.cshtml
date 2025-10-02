@@ -1,0 +1,95 @@
+﻿@model WebApplication2KS.Models.ReliefEffort
+
+@{
+    ViewData["Title"] = "Edit Relief Effort";
+}
+
+<div class="container mt-5">
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h1 class="fw-bold text-dark">✏️ Edit Relief Effort</h1>
+        <p class="text-muted">Update the details of this relief effort.</p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="card shadow-sm border-0 rounded-3">
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <input type="hidden" asp-for="EffortId" />
+
+                <!-- Title -->
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label fw-semibold"></label>
+                    <input asp-for="Title" class="form-control shadow-sm rounded-3" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label fw-semibold"></label>
+                    <textarea asp-for="Description" class="form-control shadow-sm rounded-3" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <!-- Date -->
+                <div class="mb-3">
+                    <label asp-for="Date" class="form-label fw-semibold"></label>
+                    <input asp-for="Date" type="date" class="form-control shadow-sm rounded-3" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                    <a asp-action="Index" class="btn btn-outline-secondary rounded-3 px-4">⬅ Back</a>
+                    <button type="submit" class="btn btn-dark rounded-3 px-4">💾 Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    body {
+        background-color: #f4f6f9;
+        font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        background-color: #fff;
+    }
+
+    .form-control {
+        border: 1px solid #ced4da;
+        transition: all 0.2s ease-in-out;
+    }
+
+        .form-control:focus {
+            border-color: #6c757d;
+            box-shadow: 0 0 6px rgba(108, 117, 125, 0.4);
+        }
+
+    .btn-dark {
+        background-color: #343a40;
+        border: none;
+    }
+
+        .btn-dark:hover {
+            background-color: #23272b;
+        }
+
+    .btn-outline-secondary:hover {
+        background-color: #6c757d;
+        color: #fff;
+    }
+</style>

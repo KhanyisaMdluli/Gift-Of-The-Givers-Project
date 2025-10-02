@@ -1,0 +1,19 @@
+﻿@page
+@model ConfirmEmailModel
+@{
+    ViewData["Title"] = "Confirm email";
+}
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center mb-5">
+                <h1 class="mx-auto my-0 text-uppercase">Gift of the Givers Organization</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-3">When disaster strikes we are always there to land a hand</h2>
+                <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Login">Get Started</a>
+            </div>
+        </div>
+    </div>
+</header>
+<h1 class="mt-5 justify-content-center">@ViewData["Title"]</h1>
+<partial name="_StatusMessage" model="Model.StatusMessage" />
+ 

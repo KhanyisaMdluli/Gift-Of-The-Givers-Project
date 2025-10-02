@@ -1,0 +1,607 @@
+﻿@model WebApplication2KS.Models.Donation
+@{
+    ViewData["Title"] = "Create Donation";
+}
+
+<div class="create-donation-container">
+    <!-- Header Section -->
+    <div class="form-header">
+        <div class="header-content">
+            <h1 class="form-title">
+                <i class="fas fa-plus-circle"></i>
+                Create New Donation
+            </h1>
+            <p class="form-subtitle">Add a new donation record to your database</p>
+        </div>
+        <div class="header-actions">
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i>
+                Back to Dashboard
+            </a>
+        </div>
+    </div>
+
+    <!-- Form Card -->
+    <div class="form-card">
+        <div class="form-card-header">
+            <h2 class="card-title">
+                <i class="fas fa-credit-card"></i>
+                Donation Details
+            </h2>
+        </div>
+
+        <div class="form-card-body">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="validation-summary">
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Please fix the following errors:</span>
+                        <ul class="error-list">
+                            @Html.ValidationSummary(false)
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    
+                    
+
+                    <!-- Amount Field -->
+                    <div class="form-group">
+                        <label for="Amount" class="form-label">
+                            <i class="fas fa-dollar-sign"></i>
+                            Amount
+                        </label>
+                        <div class="input-group">
+                            <span class="input-prefix">$</span>
+                            <input asp-for="Amount" type="number" step="0.01" min="0.01"
+                                   class="form-input" id="Amount" placeholder="0.00" required />
+                            <span class="input-suffix">USD</span>
+                        </div>
+                        <span asp-validation-for="Amount" class="field-validation-error"></span>
+                        <div class="form-hint">
+                            Enter the donation amount in US dollars
+                        </div>
+                    </div>
+
+                    <!-- Type Field -->
+                    <div class="form-group">
+                        <label for="Type" class="form-label">
+                            <i class="fas fa-layer-group"></i>
+                            Donation Type
+                        </label>
+                        <div class="input-group">
+                            <select asp-for="Type" class="form-select" id="Type" required>
+                                <option value="">Select donation type...</option>
+                                <option value="Cash">Cash</option>
+                                <option value="Check">Check</option>
+                                <option value="Online">Online</option>
+                                <option value="In-Kind">In-Kind</option>
+                            </select>
+                            <div class="select-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Type" class="field-validation-error"></span>
+                        <div class="form-hint">
+                            Specify the method of donation
+                        </div>
+                    </div>
+
+                    <!-- Date Field -->
+                    <div class="form-group">
+                        <label for="Date" class="form-label">
+                            <i class="fas fa-calendar-alt"></i>
+                            Date
+                        </label>
+                        <div class="input-group">
+                            <input asp-for="Date" type="datetime-local"
+                                   class="form-input" id="Date" required />
+                            <div class="input-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Date" class="field-validation-error"></span>
+                        <div class="form-hint">
+                            Select the date and time of the donation
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="window.history.back()">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        Create Donation
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="quick-stats">
+        <div class="stat-item">
+            <i class="fas fa-info-circle"></i>
+            <span>Current total donations: <strong>@ViewBag.TotalDonations ?? 0</strong></span>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Total amount raised: <strong>$@ViewBag.TotalAmount?.ToString("N0") ?? "0"</strong></span>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Set default date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('Date');
+            if (dateInput && !dateInput.value) {
+                dateInput.value = new Date().toISOString().slice(0, 16);
+            }
+
+            // Format amount input
+            const amountInput = document.getElementById('Amount');
+            if (amountInput) {
+                amountInput.addEventListener('input', function(e) {
+                    let value = e.target.value;
+                    if (value) {
+                        value = parseFloat(value).toFixed(2);
+                        e.target.value = value;
+                    }
+                });
+            }
+
+            // Add real-time validation feedback
+            const formInputs = document.querySelectorAll('.form-input, .form-select');
+            formInputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.checkValidity()) {
+                        this.parentElement.classList.add('is-valid');
+                        this.parentElement.classList.remove('is-invalid');
+                    } else {
+                        this.parentElement.classList.add('is-invalid');
+                        this.parentElement.classList.remove('is-valid');
+                    }
+                });
+
+                input.addEventListener('input', function() {
+                    this.parentElement.classList.remove('is-invalid');
+                });
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating...';
+
+            // Re-enable after 3 seconds if needed (in case of errors)
+            setTimeout(() => {
+                if (submitBtn.disabled) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            }, 3000);
+        });
+    </script>
+}
+
+<style>
+    :root {
+        --primary-color: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary-color: #64748b;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --danger-color: #ef4444;
+        --info-color: #3b82f6;
+        --light-bg: #f8fafc;
+        --card-bg: #ffffff;
+        --border-color: #e2e8f0;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-primary);
+    }
+
+    .create-donation-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    /* Header Styles */
+    .form-header {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-content {
+        flex: 1;
+    }
+
+    .form-title {
+        margin: 0 0 0.5rem 0;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+        .form-title i {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+        }
+
+    .form-subtitle {
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .header-actions .btn {
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Form Card */
+    .form-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border-color);
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+
+    .form-card-header {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        color: white;
+        padding: 1.5rem 2rem;
+    }
+
+    .card-title {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .card-title i {
+            font-size: 1rem;
+        }
+
+    .form-card-body {
+        padding: 2rem;
+    }
+
+    /* Form Grid */
+    .form-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        margin-bottom: 0.25rem;
+    }
+
+        .form-label i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+
+    /* Input Styles */
+    .input-group {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+        .input-group .form-input,
+        .input-group .form-select {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #fafbfc;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+            .input-group .form-input:focus,
+            .input-group .form-select:focus {
+                border-color: var(--primary-color);
+                background: white;
+                box-shadow: 0 0 0 3px rgb(99 102 241 / 0.1);
+                transform: translateY(-1px);
+            }
+
+    .input-prefix,
+    .input-suffix {
+        position: absolute;
+        padding: 1rem 0.75rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+        background: transparent;
+        z-index: 1;
+    }
+
+    .input-prefix {
+        left: 0;
+        border-right: 1px solid var(--border-color);
+        border-radius: 12px 0 0 12px;
+    }
+
+    .input-suffix {
+        right: 0;
+        border-left: 1px solid var(--border-color);
+        border-radius: 0 12px 12px 0;
+        background: #f1f5f9;
+    }
+
+    .input-icon {
+        position: absolute;
+        right: 1rem;
+        color: var(--text-secondary);
+        pointer-events: none;
+    }
+
+    .select-wrapper {
+        position: relative;
+    }
+
+    .select-icon {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-secondary);
+        pointer-events: none;
+        transition: transform 0.2s ease;
+    }
+
+    .form-select:focus + .select-icon,
+    .form-select:hover + .select-icon {
+        color: var(--primary-color);
+    }
+
+    /* Validation States */
+    .form-group.is-valid .form-input,
+    .form-group.is-valid .form-select {
+        border-color: var(--success-color);
+        background: #f0fdf4;
+    }
+
+    .form-group.is-invalid .form-input,
+    .form-group.is-invalid .form-select {
+        border-color: var(--danger-color);
+        background: #fef2f2;
+    }
+
+    .field-validation-error {
+        color: var(--danger-color);
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+        display: block;
+        font-weight: 500;
+    }
+
+    .field-validation-valid {
+        display: none;
+    }
+
+    .form-hint {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        margin-top: 0.25rem;
+        font-style: italic;
+    }
+
+    /* Validation Summary */
+    .validation-summary {
+        margin-bottom: 1.5rem;
+    }
+
+    .alert {
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        border: none;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .alert-danger {
+        background: #fef2f2;
+        color: #dc2626;
+        border: 1px solid #fecaca;
+    }
+
+    .alert i {
+        flex-shrink: 0;
+        margin-top: 0.125rem;
+    }
+
+    .error-list {
+        margin: 0.5rem 0 0 0;
+        padding-left: 1.25rem;
+    }
+
+        .error-list li {
+            margin-bottom: 0.25rem;
+            font-size: 0.875rem;
+        }
+
+    /* Button Styles */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.875rem 1.75rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.875rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        color: white;
+        box-shadow: var(--shadow-md);
+    }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--text-secondary);
+        border: 2px solid var(--border-color);
+    }
+
+        .btn-secondary:hover {
+            background: var(--light-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none !important;
+    }
+
+    /* Form Actions */
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border-color);
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+
+    /* Quick Stats */
+    .quick-stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--card-bg);
+        padding: 1.5rem 2rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
+    }
+
+    .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+    }
+
+        .stat-item i {
+            color: var(--primary-color);
+            width: 16px;
+        }
+
+        .stat-item strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+    /* Responsive Design */
+
+
+
+
+    /* Animations */
+
+
+    .form-card {
+        animation: slideInUp 0.3s ease-out;
+    }
+
+    /* Focus trap for accessibility */
+    .form-input:focus,
+    .form-select:focus {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">

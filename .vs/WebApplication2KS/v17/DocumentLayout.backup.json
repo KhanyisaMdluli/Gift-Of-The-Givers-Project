@@ -1,0 +1,755 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\reliefefforts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\reliefefforts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\reliefefforts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\reliefefforts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\volunteers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\volunteers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\volunteers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\volunteers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\controllers\\volunteerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\controllers\\volunteerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\volunteers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\volunteers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\volunteers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\volunteers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\volunteers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\volunteers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\donations\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\donations\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\donations\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\donations\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\donations\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\donations\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\donations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\donations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\controllers\\donationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\controllers\\donationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\donations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\donations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\data\\webappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\data\\webappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\reliefefforts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\reliefefforts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\controllers\\reliefeffortscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\controllers\\reliefeffortscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\controllers\\disasteralertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\controllers\\disasteralertscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\disasteralerts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\disasteralerts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\disasteralerts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\disasteralerts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\models\\reliefeffort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\models\\reliefeffort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\models\\disasteralert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\models\\disasteralert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\areas\\identity\\pages\\account\\registerconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\areas\\identity\\pages\\account\\registerconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\areas\\identity\\pages\\account\\registerconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\areas\\identity\\pages\\account\\registerconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\webapplication2ks.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\webapplication2ks.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Naledi\\Downloads\\startbootstrap-grayscale-gh-pages\\startbootstrap-grayscale-gh-pages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\models\\volunteer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\models\\volunteer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|c:\\users\\chick\\documents\\third_year_2025\\semester 2\\ks\\webapplication2ks\\webapplication2ks\\models\\effortassigned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4854D87-9546-43C5-BB23-C12EE40C62DE}|WebApplication2KS\\WebApplication2KS.csproj|solutionrelative:webapplication2ks\\models\\effortassigned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\ReliefEfforts\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\ReliefEfforts\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\ReliefEfforts\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\ReliefEfforts\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T14:35:32.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Volunteers\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Details.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Volunteers\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T14:24:28.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Volunteers\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Delete.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Volunteers\\Delete.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T14:22:16.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Volunteers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Volunteers\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T14:17:18.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-29T14:12:35.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Donations\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Delete.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Donations\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T14:06:35.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Donations\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Details.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Donations\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T14:02:46.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\ReliefEfforts\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\ReliefEfforts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\ReliefEfforts\\Index.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\ReliefEfforts\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T18:40:22.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Donations\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Create.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Donations\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T19:01:17.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:14:19.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Donations\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Index.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Donations\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T18:40:19.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VolunteersController.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\VolunteersController.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Controllers\\VolunteersController.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\VolunteersController.cs",
+              "RelativeToolTip": "WebApplication2KS\\Controllers\\VolunteersController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAgwIcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T18:31:07.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WebAppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Data\\WebAppDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Data\\WebAppDbContext.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Data\\WebAppDbContext.cs",
+              "RelativeToolTip": "WebApplication2KS\\Data\\WebAppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:49:59.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Volunteers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Create.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Volunteers\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T18:37:16.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T17:47:02.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwCwAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:09:40.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Volunteers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Volunteers\\Index.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Volunteers\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T18:36:31.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Donations\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Donations\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Donations\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T20:10:47.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DonationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\DonationsController.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Controllers\\DonationsController.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\DonationsController.cs",
+              "RelativeToolTip": "WebApplication2KS\\Controllers\\DonationsController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAqwE4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T17:59:10.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ReliefEffortsController.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\ReliefEffortsController.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Controllers\\ReliefEffortsController.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\ReliefEffortsController.cs",
+              "RelativeToolTip": "WebApplication2KS\\Controllers\\ReliefEffortsController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T18:38:33.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\ReliefEfforts\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\ReliefEfforts\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\ReliefEfforts\\Create.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\ReliefEfforts\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T18:41:09.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\DisasterAlerts\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\DisasterAlerts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\DisasterAlerts\\Index.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\DisasterAlerts\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T18:25:14.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DisasterAlertsController.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\DisasterAlertsController.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Controllers\\DisasterAlertsController.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\DisasterAlertsController.cs",
+              "RelativeToolTip": "WebApplication2KS\\Controllers\\DisasterAlertsController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAuwEcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T18:18:03.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DisasterAlert.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\DisasterAlert.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Models\\DisasterAlert.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\DisasterAlert.cs",
+              "RelativeToolTip": "WebApplication2KS\\Models\\DisasterAlert.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:46:31.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication2KS\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T17:54:12.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\DisasterAlerts\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\DisasterAlerts\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\DisasterAlerts\\Create.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\DisasterAlerts\\Create.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-19T18:26:10.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ReliefEffort.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\ReliefEffort.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Models\\ReliefEffort.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\ReliefEffort.cs",
+              "RelativeToolTip": "WebApplication2KS\\Models\\ReliefEffort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:46:08.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Donation.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\Donation.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Models\\Donation.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\Donation.cs",
+              "RelativeToolTip": "WebApplication2KS\\Models\\Donation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:46:52.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\User.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\User.cs",
+              "RelativeToolTip": "WebApplication2KS\\Models\\User.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvxIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:45:35.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAUwIAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T17:47:45.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T17:47:41.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ConfirmEmail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeToolTip": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T18:44:01.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ConfirmEmail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T18:44:01.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "RegisterConfirmation.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "RelativeToolTip": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T18:50:16.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RegisterConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T18:50:16.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "WebApplication2KS\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "WebApplication2KS\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-18T17:46:55.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WebApplication2KS\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T18:01:06.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "WebApplication2KS.csproj",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\WebApplication2KS.csproj",
+              "RelativeDocumentMoniker": "WebApplication2KS\\WebApplication2KS.csproj",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\WebApplication2KS.csproj",
+              "RelativeToolTip": "WebApplication2KS\\WebApplication2KS.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-18T17:45:26.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-17T20:58:34.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Naledi\\Downloads\\startbootstrap-grayscale-gh-pages\\startbootstrap-grayscale-gh-pages\\index.html",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Naledi\\Downloads\\startbootstrap-grayscale-gh-pages\\startbootstrap-grayscale-gh-pages\\index.html",
+              "ToolTip": "C:\\Users\\Naledi\\Downloads\\startbootstrap-grayscale-gh-pages\\startbootstrap-grayscale-gh-pages\\index.html",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Naledi\\Downloads\\startbootstrap-grayscale-gh-pages\\startbootstrap-grayscale-gh-pages\\index.html",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAQwMoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-16T10:27:35.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "WebApplication2KS\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-16T10:14:17.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication2KS\\appsettings.json",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\appsettings.json",
+              "RelativeToolTip": "WebApplication2KS\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-16T09:56:35.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Program.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Program.cs",
+              "RelativeToolTip": "WebApplication2KS\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:55:57.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "EffortAssigned.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\EffortAssigned.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Models\\EffortAssigned.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\EffortAssigned.cs",
+              "RelativeToolTip": "WebApplication2KS\\Models\\EffortAssigned.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:47:06.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Volunteer.cs",
+              "DocumentMoniker": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\Volunteer.cs",
+              "RelativeDocumentMoniker": "WebApplication2KS\\Models\\Volunteer.cs",
+              "ToolTip": "C:\\Users\\Chick\\Documents\\Third_Year_2025\\Semester 2\\KS\\WebApplication2KS\\WebApplication2KS\\Models\\Volunteer.cs",
+              "RelativeToolTip": "WebApplication2KS\\Models\\Volunteer.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvxUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T09:45:51.137Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

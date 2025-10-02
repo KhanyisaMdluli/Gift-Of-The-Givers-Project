@@ -1,0 +1,72 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <header class="masthead bg-light py-5">
+        <div class="container px-4 px-lg-5 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-4 text-uppercase">Welcome Back</h1>
+                <a class="btn btn-primary mb-5" asp-controller="Donations" asp-action="Index">Make a Donation</a>
+                <div class="row gx-4 gx-lg-5">
+                    <!-- Address Card -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card py-4 h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-3 fa-2x"></i>
+                                <h4 class="text-uppercase m-0">Become a Volunteer</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-muted">
+                                    <a asp-controller="Volunteers" asp-action="Index">Volunteer Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Email Card -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card py-4 h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-3 fa-2x"></i>
+                                <h4 class="text-uppercase m-0">Report a Disaster</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-muted">
+                                    <a asp-controller="DisasterAlerts" asp-action="Index">Report Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Phone Card -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card py-4 h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-3 fa-2x"></i>
+                                <h4 class="text-uppercase m-0">Relief Program</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-muted">
+                                    <a asp-controller="ReliefEfforts" asp-action="Index">Relief Effort</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+}
+else
+{
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center mb-5">
+                    <h1 class="mx-auto my-0 text-uppercase">Gift of the Givers Organization</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-3">When disaster strikes we are always there to land a hand</h2>
+                    <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Login">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+}
+
