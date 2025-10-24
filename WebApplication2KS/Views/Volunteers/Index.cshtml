@@ -1,101 +1,47 @@
 ﻿@model IEnumerable<WebApplication2KS.Models.Volunteer>
 
 @{
-    ViewData["Title"] = "Volunteers";
+    ViewData["Title"] = "Index";
 }
 
-<div class="container mt-5">
-    <!-- Page Header -->
-    <div class="d-flex justify-content-between align-items-center mb-4 mt-5">
-        <h1 class="fw-bold text-dark mt-5">👥 Volunteers</h1>
-        <a asp-action="Create" class="btn btn-success shadow-sm">
-            Register to Volunteer
-        </a>
-    </div>
+<h1 class="mt-5">Index</h1>
 
-    <!-- Volunteers Table -->
-    <div class="table-responsive">
-        <table class="table table-hover shadow-sm rounded">
-            <thead class="table-dark text-white">
-                <tr>
-                    <th>@Html.DisplayNameFor(model => model.Name)</th>
-                    <th>@Html.DisplayNameFor(model => model.EmailAddress)</th>
-                    <th>@Html.DisplayNameFor(model => model.User)</th>
-                    <th class="text-center">Actions</th>
-                </tr>
-            </thead>
-            <tbody class="table-light">
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                        <td>@Html.DisplayFor(modelItem => item.EmailAddress)</td>
-                        <td>@Html.DisplayFor(modelItem => item.User.EmailAddress)</td>
-                        <td class="text-center">
-                            <a asp-action="Edit" asp-route-id="@item.VolunteerId"
-                               class="btn btn-sm btn-outline-primary me-2">✏ Edit</a>
-                            <a asp-action="Details" asp-route-id="@item.VolunteerId"
-                               class="btn btn-sm btn-outline-secondary me-2">🔍 Details</a>
-                            <a asp-action="Delete" asp-route-id="@item.VolunteerId"
-                               class="btn btn-sm btn-outline-danger">🗑 Delete</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<style>
-    body {
-        background-color: #f4f6f9;
-        font-family: 'Segoe UI', Roboto, sans-serif;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .btn {
-        border-radius: 8px;
-        transition: all 0.2s ease-in-out;
-    }
-
-    .btn-success {
-        background-color: #198754;
-        border: none;
-    }
-
-        .btn-success:hover {
-            background-color: #157347;
-        }
-
-    .btn-outline-primary:hover {
-        background-color: #0d6efd;
-        color: #fff;
-    }
-
-    .btn-outline-secondary:hover {
-        background-color: #6c757d;
-        color: #fff;
-    }
-
-    .btn-outline-danger:hover {
-        background-color: #dc3545;
-        color: #fff;
-    }
-
-    .table {
-        border-radius: 0.75rem;
-        overflow: hidden;
-    }
-
-        .table thead {
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
-    .table-hover tbody tr:hover {
-        background-color: #f1f3f5;
-    }
-</style>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.EmailAddress)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VolunteerId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VolunteerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VolunteerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -126,7 +126,7 @@ namespace WebApplication2KS.Areas.Identity.Pages.Account
                 WebApplication2KS.Models.User newUser = new WebApplication2KS.Models.User();
                 newUser.EmailAddress = Input.Email;
                 newUser.Password = Input.Password;
-                newUser.UserId = new Random().Next(1000,100000);
+                
                 newUser.Name = Input.Email.ToString();
 
                 _webAppDbContext.Users.Add(newUser);

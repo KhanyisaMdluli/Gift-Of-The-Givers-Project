@@ -1,102 +1,42 @@
 ﻿@model WebApplication2KS.Models.Donation
 
 @{
-    ViewData["Title"] = "Donation Details";
+    ViewData["Title"] = "Details";
 }
 
-<div class="container mt-5">
-    <div class="card shadow-sm border-0 rounded-3 mt-5">
-        <div class="card-header bg-dark text-white mt-5">
-            <h3 class="mb-0">Donation Details</h3>
-        </div>
-        <div class="card-body">
-            <dl class="row mb-0">
-                <dt class="col-sm-3 text-muted">
-                    @Html.DisplayNameFor(model => model.Amount)
-                </dt>
-                <dd class="col-sm-9 fw-bold">
-                    💵 @Html.DisplayFor(model => model.Amount)
-                </dd>
+<h1>Details</h1>
 
-                <dt class="col-sm-3 text-muted">
-                    @Html.DisplayNameFor(model => model.Type)
-                </dt>
-                <dd class="col-sm-9">
-                    <span class="badge bg-secondary px-3 py-2">
-                        @Html.DisplayFor(model => model.Type)
-                    </span>
-                </dd>
-
-                <dt class="col-sm-3 text-muted">
-                    @Html.DisplayNameFor(model => model.Date)
-                </dt>
-                <dd class="col-sm-9">
-                    📅 @Html.DisplayFor(model => model.Date)
-                </dd>
-
-                <dt class="col-sm-3 text-muted">
-                    Donor Email
-                </dt>
-                <dd class="col-sm-9">
-                    👤 @Html.DisplayFor(model => model.User.EmailAddress)
-                </dd>
-            </dl>
-        </div>
-        <div class="card-footer d-flex justify-content-between bg-light">
-
-            <a asp-action="Index" class="btn btn-secondary">
-                ⬅ Back to List
-            </a>
-        </div>
-    </div>
+<div>
+    <h4>Donation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.User.EmailAddress)
+        </dd>
+    </dl>
 </div>
-
-<style>
-    body {
-        background-color: #f1f3f5; /* light grey background */
-        font-family: 'Inter', 'Segoe UI', sans-serif;
-    }
-
-    .card {
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .card-header {
-        border-top-left-radius: 0.75rem !important;
-        border-top-right-radius: 0.75rem !important;
-    }
-
-    .card-footer {
-        border-bottom-left-radius: 0.75rem !important;
-        border-bottom-right-radius: 0.75rem !important;
-    }
-
-    dt {
-        font-weight: 600;
-        font-size: 0.95rem;
-    }
-
-    dd {
-        font-size: 1rem;
-    }
-
-    .btn {
-        border-radius: 6px;
-        transition: all 0.2s ease;
-    }
-
-    .btn-outline-dark:hover {
-        background-color: #343a40;
-        color: #fff;
-    }
-
-    .btn-secondary {
-        background-color: #6c757d;
-        border: none;
-    }
-
-        .btn-secondary:hover {
-            background-color: #5a6268;
-        }
-</style>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.DonationId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

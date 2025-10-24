@@ -67,6 +67,9 @@ namespace WebApplication2KS.Controllers
             var email = await _userManager.GetEmailAsync(loggedInUser);
             var logged  = _context.Users.FirstOrDefault(u => u.EmailAddress == email) ?? user;
 
+
+
+            
             user.EmailAddress = logged.EmailAddress;
             user.Password = logged.Password;
             user.Name = logged.Name;
@@ -106,29 +109,39 @@ namespace WebApplication2KS.Controllers
             {
                 return NotFound();
             }
+            WebApplication2KS.Models.User user = new WebApplication2KS.Models.User();
+            var loggedInUser = await _userManager.GetUserAsync(User);
+            var email = await _userManager.GetEmailAsync(loggedInUser);
+            var logged = _context.Users.FirstOrDefault(u => u.EmailAddress == email) ?? user;
 
-            if (ModelState.IsValid)
+
+
+
+            user.EmailAddress = logged.EmailAddress;
+            user.Password = logged.Password;
+            user.Name = logged.Name;
+
+            donation.UserId = user.UserId;
+            donation.User = user;
+
+            try
             {
-                try
-                {
-                    _context.Update(donation);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DonationExists(donation.DonationId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Update(donation);
+                await _context.SaveChangesAsync();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "UserId", "EmailAddress", donation.UserId);
-            return View(donation);
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!DonationExists(donation.DonationId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
+            
         }
 
         // GET: Donations/Delete/5

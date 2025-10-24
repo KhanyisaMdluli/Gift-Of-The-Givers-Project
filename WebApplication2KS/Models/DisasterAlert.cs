@@ -15,7 +15,7 @@ namespace WebApplication2KS.Models
         public string Type { get; set; }
         public DateTime Date { get; set; }
         public string Location { get; set; }
-
+        public int ReliefEffortId { get; set; } 
         public virtual User User { get; set; }
         public virtual ReliefEffort ReliefEffort { get; set; }
     }

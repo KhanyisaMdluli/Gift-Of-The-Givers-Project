@@ -120,26 +120,23 @@ namespace WebApplication2KS.Controllers
             user.Name = logged.Name;
 
             volunteer.User = user;
-
             try
+            {
+                _context.Update(volunteer);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!VolunteerExists(volunteer.VolunteerId))
                 {
-                    
-                    _context.Update(volunteer);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
+                else
                 {
-                    if (!VolunteerExists(volunteer.VolunteerId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    throw;
                 }
-                return RedirectToAction(nameof(Index));
-            
+            }
+            return RedirectToAction(nameof(Index));
             
         }
 

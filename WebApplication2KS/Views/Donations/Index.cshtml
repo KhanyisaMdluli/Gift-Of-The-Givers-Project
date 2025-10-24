@@ -1,120 +1,638 @@
 ﻿@model IEnumerable<WebApplication2KS.Models.Donation>
-
 @{
-    ViewData["Title"] = "Donations";
+    ViewData["Title"] = "Donations Dashboard";
 }
 
-<div class="page-header text-center mb-5">
-    <h1 class="fw-bold text-dark">Donations Dashboard</h1>
-    <p class="text-secondary">Track and manage all donations with ease.</p>
-</div>
+<div class="dashboard-container mb-5">
+    <!-- Header Section -->
+    <div class="dashboard-header">
+        <div class="header-content">
+            <h1 class="dashboard-title">
+                <i class="fas fa-heart"></i>
+                Donations Dashboard
+            </h1>
+            <p class="dashboard-subtitle">Manage and track all donations</p>
+        </div>
+        <a asp-action="Create" class="btn btn-primary btn-lg">
+            <i class="fas fa-plus"></i> New Donation
+        </a>
+    </div>
 
-<div class="d-flex justify-content-end mb-3">
-    <a asp-action="Create" class="btn btn-dark shadow-sm">
-        Make A Donation
-    </a>
-</div>
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="stat-content">
+                <h3>Total Amount</h3>
+                <p class="stat-value">$@Model.Sum(d => d.Amount).ToString("N0")</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-content">
+                <h3>Total Donations</h3>
+                <p class="stat-value">@Model.Count()</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-calendar"></i>
+            </div>
+            <div class="stat-content">
+                <h3>Recent Donations</h3>
+                <p class="stat-value">@Model.Where(d => d.Date >= DateTime.Now.AddDays(-30)).Count()</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+                <h3>Unique Donors</h3>
+                <p class="stat-value">@Model.Select(d => d.User.EmailAddress).Distinct().Count()</p>
+            </div>
+        </div>
+    </div>
 
-<div class="card shadow-sm rounded border-0">
-    <div class="card-body p-0">
-        <div class="table-responsive">
-            <table class="table table-hover align-middle mb-0">
-                <thead class="table-dark text-light">
+    <!-- Donations Table -->
+    <div class="table-container mb-5">
+        <div class="table-header">
+            <h2 class="table-title">
+                <i class="fas fa-list"></i>
+                Recent Donations
+            </h2>
+            <div class="table-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search donations..." class="search-input">
+                </div>
+                <button class="btn btn-outline-primary">
+                    <i class="fas fa-filter"></i> Filter
+                </button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="dashboard-table">
+                <thead>
                     <tr>
-                        <th>@Html.DisplayNameFor(model => model.Amount)</th>
-                        <th>@Html.DisplayNameFor(model => model.Date)</th>
-                        <th>@Html.DisplayNameFor(model => model.Type)</th>
-                        <th>@Html.DisplayNameFor(model => model.User)</th>
-                        
-                        <th class="text-center">Actions</th>
+                        <th class="amount-col">
+                            <span class="column-title">Amount</span>
+                            <i class="fas fa-sort" data-sort="amount"></i>
+                        </th>
+                        <th class="type-col">
+                            <span class="column-title">Type</span>
+                            <i class="fas fa-sort" data-sort="type"></i>
+                        </th>
+                        <th class="date-col">
+                            <span class="column-title">Date</span>
+                            <i class="fas fa-sort" data-sort="date"></i>
+                        </th>
+                        <th class="user-col">
+                            <span class="column-title">Donor</span>
+                            <i class="fas fa-sort" data-sort="user"></i>
+                        </th>
+                        <th class="actions-col">
+                            <span class="column-title">Actions</span>
+                        </th>
                     </tr>
                 </thead>
-                <tbody class="table-light">
-                    @foreach (var item in Model)
+                <tbody>
+                    @foreach (var item in Model.OrderByDescending(d => d.Date))
                     {
-                        <tr>
-                            <td>💵 @Html.DisplayFor(modelItem => item.Amount)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Date)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Type)</td>
-                            <td>@Html.DisplayFor(modelItem => item.User.EmailAddress)</td>
-                            
-                            <td class="text-center">
-                                <a asp-action="Details" asp-route-id="@item.DonationId"
-                                   class="btn btn-sm btn-outline-secondary me-2">🔍 Details</a>
-                                <a asp-action="Delete" asp-route-id="@item.DonationId"
-                                   class="btn btn-sm btn-outline-danger">🗑 Delete</a>
+                        <tr class="donation-row">
+                            <td class="amount-cell">
+                                <div class="amount-wrapper">
+                                    <span class="amount-currency">$</span>
+                                    <span class="amount-value">@item.Amount.ToString("N2")</span>
+                                </div>
+                            </td>
+                            <td class="type-cell">
+                                <span class="type-badge @GetTypeClass(item.Type)">
+                                    @item.Type
+                                </span>
+                            </td>
+                            <td class="date-cell">
+                                <div class="date-display">
+                                    <span class="date-full">@item.Date.ToString("MMM dd, yyyy")</span>
+                                    <span class="date-time">@item.Date.ToString("HH:mm")</span>
+                                </div>
+                            </td>
+                            <td class="user-cell">
+                                <div class="user-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="user-details">
+                                        <span class="user-email">@item.User.EmailAddress</span>
+                                        <span class="user-id">ID: @item.User.UserId</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="actions-cell">
+                                <div class="action-buttons">
+                                    <a asp-action="Edit" asp-route-id="@item.DonationId"
+                                       class="btn btn-sm btn-outline-primary" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a asp-action="Details" asp-route-id="@item.DonationId"
+                                       class="btn btn-sm btn-outline-info" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.DonationId"
+                                       class="btn btn-sm btn-outline-danger" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
         </div>
+
+        <!-- Empty State -->
+        @if (!Model.Any())
+        {
+            <div class="empty-state">
+                <div class="empty-icon">
+                    <i class="fas fa-inbox"></i>
+                </div>
+                <h3>No donations yet</h3>
+                <p>Start by creating your first donation entry.</p>
+                <a asp-action="Create" class="btn btn-primary">Create First Donation</a>
+            </div>
+        }
     </div>
 </div>
 
+@functions {
+    public string GetTypeClass(string type)
+    {
+        return type?.ToLower() switch
+        {
+            "cash" => "badge-success",
+            "check" => "badge-warning",
+            "online" => "badge-primary",
+            "in-kind" => "badge-info",
+            _ => "badge-secondary"
+        };
+    }
+}
+
 <style>
+    :root {
+        --primary-color: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary-color: #64748b;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --danger-color: #ef4444;
+        --info-color: #3b82f6;
+        --light-bg: #f8fafc;
+        --card-bg: #ffffff;
+        --border-color: #e2e8f0;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        background-color: #f1f3f5; /* soft grey background */
-        font-family: 'Inter', 'Segoe UI', sans-serif;
+        background-color: var(--light-bg);
+        color: var(--text-primary);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
     }
 
-    .page-header h1 {
-        font-size: 2.25rem;
-        font-weight: 700;
+    .dashboard-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
     }
 
-    .page-header p {
-        font-size: 1rem;
-        color: #6c757d;
-    }
-
-    .card {
-        background: #ffffff;
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        background: var(--card-bg);
+        padding: 1.5rem 2rem;
         border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
     }
 
-    .table thead {
-        font-size: 0.95rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+    .dashboard-title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
     }
 
-    .table tbody tr:hover {
-        background-color: #f8f9fa;
-        transition: 0.2s ease;
+        .dashboard-title i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+    .dashboard-subtitle {
+        margin: 0.25rem 0 0 0;
+        color: var(--text-secondary);
+        font-size: 1rem;
     }
 
     .btn {
-        border-radius: 6px;
-        transition: all 0.2s ease;
-    }
-
-    .btn-dark {
-        background-color: #343a40;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.875rem;
         border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        white-space: nowrap;
     }
 
-        .btn-dark:hover {
-            background-color: #212529;
+    .btn-primary {
+        background: var(--primary-color);
+        color: white;
+    }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
         }
 
-    .btn-outline-secondary {
-        border: 1.5px solid #6c757d;
-        color: #6c757d;
+    .btn-outline-primary {
+        background: transparent;
+        color: var(--primary-color);
+        border: 1.5px solid var(--primary-color);
     }
 
-        .btn-outline-secondary:hover {
-            background-color: #6c757d;
-            color: #fff;
+        .btn-outline-primary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+    .btn-outline-info {
+        background: transparent;
+        color: var(--info-color);
+        border: 1.5px solid var(--info-color);
+    }
+
+        .btn-outline-info:hover {
+            background: var(--info-color);
+            color: white;
         }
 
     .btn-outline-danger {
-        border: 1.5px solid #dc3545;
-        color: #dc3545;
+        background: transparent;
+        color: var(--danger-color);
+        border: 1.5px solid var(--danger-color);
     }
 
         .btn-outline-danger:hover {
-            background-color: #dc3545;
-            color: #fff;
+            background: var(--danger-color);
+            color: white;
         }
+
+    .btn-sm {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .stat-card {
+        background: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        color: white;
+    }
+
+        .stat-icon:nth-child(1) {
+            background: var(--primary-color);
+        }
+
+        .stat-icon:nth-child(2) {
+            background: var(--success-color);
+        }
+
+        .stat-icon:nth-child(3) {
+            background: var(--warning-color);
+        }
+
+        .stat-icon:nth-child(4) {
+            background: var(--info-color);
+        }
+
+    .stat-content h3 {
+        margin: 0 0 0.25rem 0;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+    }
+
+    .stat-value {
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+    }
+
+    .table-container {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--border-color);
+        overflow: hidden;
+    }
+
+    .table-header {
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .table-title {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .table-title i {
+            color: var(--primary-color);
+        }
+
+    .table-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .search-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-input {
+        padding: 0.5rem 1rem 0.5rem 2.5rem;
+        border: 1.5px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 0.875rem;
+        transition: border-color 0.2s ease;
+        width: 250px;
+    }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgb(99 102 241 / 0.1);
+        }
+
+    .search-box i {
+        position: absolute;
+        left: 0.75rem;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .dashboard-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+    }
+
+        .dashboard-table thead tr {
+            background: #f1f5f9;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .dashboard-table th {
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+            position: relative;
+        }
+
+            .dashboard-table th i {
+                margin-left: 0.5rem;
+                color: var(--text-secondary);
+                cursor: pointer;
+                transition: color 0.2s ease;
+            }
+
+                .dashboard-table th i:hover {
+                    color: var(--primary-color);
+                }
+
+        .dashboard-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: middle;
+        }
+
+    .donation-row:hover {
+        background: #f8fafc;
+    }
+
+    .amount-wrapper {
+        display: flex;
+        align-items: baseline;
+        gap: 0.25rem;
+    }
+
+    .amount-currency {
+        font-size: 1rem;
+        color: var(--success-color);
+        font-weight: 600;
+    }
+
+    .amount-value {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--text-primary);
+    }
+
+    .type-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+    }
+
+    .badge-success {
+        background: #dcfce7;
+        color: #166534;
+    }
+
+    .badge-warning {
+        background: #fef3c7;
+        color: #92400e;
+    }
+
+    .badge-primary {
+        background: #dbeafe;
+        color: #1e40af;
+    }
+
+    .badge-info {
+        background: #eff6ff;
+        color: #1e3a8a;
+    }
+
+    .badge-secondary {
+        background: #f1f5f9;
+        color: #475569;
+    }
+
+    .date-display {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .date-full {
+        font-weight: 500;
+        color: var(--text-primary);
+    }
+
+    .date-time {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+    }
+
+    .user-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-email {
+        font-weight: 500;
+        color: var(--text-primary);
+        display: block;
+    }
+
+    .user-id {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 0.25rem;
+    }
+
+        .action-buttons .btn {
+            padding: 0.375rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+
+    .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--text-secondary);
+    }
+
+    .empty-icon {
+        font-size: 4rem;
+        color: #cbd5e1;
+        margin-bottom: 1rem;
+    }
+
+    .empty-state h3 {
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .empty-state p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+s
 </style>
+
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">

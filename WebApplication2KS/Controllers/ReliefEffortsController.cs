@@ -91,8 +91,7 @@ namespace WebApplication2KS.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            
                 try
                 {
                     _context.Update(reliefEffort);
@@ -110,8 +109,7 @@ namespace WebApplication2KS.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            return View(reliefEffort);
+            
         }
 
         // GET: ReliefEfforts/Delete/5
